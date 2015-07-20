@@ -38,7 +38,8 @@ namespace DiskTester
         private void Form1_Load(object sender, EventArgs e)
         {
             DriveInfo[] allDrives = DriveInfo.GetDrives();
-            foreach(DriveInfo DriveName in allDrives) {
+            foreach (DriveInfo DriveName in allDrives)
+            {
                 comboBox1.Items.Add(DriveName.Name);
             }
         }
@@ -90,12 +91,30 @@ namespace DiskTester
             for (uint i = 0; i <= 1023; i++)
             {
                 speedWriteRunner(1024, 1, DestDisk, i.ToString());
-            }    
+            }
             sw.Stop();
             // 1MB ÷ time = ?
             label4.Text = Convert.ToString((1024.0f / Convert.ToSingle(sw.ElapsedMilliseconds))) + "MB/s";
             System.GC.Collect();
 
+            sw.Reset();
+            sw.Start();
+            speedReadRunner(DestDisk);
+            sw.Stop();
+            label21.Text = Convert.ToString((1024.0f / Convert.ToSingle(sw.ElapsedMilliseconds))) + "MB/s";
+            System.GC.Collect();
+
+
+            sw.Reset();
+            string[] fileList = Directory.GetFiles(DestDisk, "*.tmp");
+            sw.Start();
+            foreach (string f in fileList)
+            {
+                File.Delete(f);
+            }
+            sw.Stop();
+            label25.Text = Convert.ToString(Convert.ToSingle(sw.ElapsedMilliseconds) / 1024.0f) + "ms";
+            System.GC.Collect();
 
             /* 2KB */
             sw.Reset();
@@ -103,10 +122,23 @@ namespace DiskTester
             for (uint i = 0; i <= 1023; i++)
             {
                 speedWriteRunner(2048, 1, DestDisk, i.ToString());
-            } 
+            }
             sw.Stop();
             // 2048KB ÷ time = ?
             label6.Text = Convert.ToString((2048.0f / Convert.ToSingle(sw.ElapsedMilliseconds))) + "MB/s";
+            System.GC.Collect();
+            sw.Reset();
+            sw.Start();
+            speedReadRunner(DestDisk);
+            sw.Stop();
+            label20.Text = Convert.ToString((2048.0f / Convert.ToSingle(sw.ElapsedMilliseconds))) + "MB/s";
+            System.GC.Collect();
+
+            sw.Reset();
+            sw.Start();
+            speedReadRunner(DestDisk);
+            sw.Stop();
+            label20.Text = Convert.ToString((2048.0f / Convert.ToSingle(sw.ElapsedMilliseconds))) + "MB/s";
             System.GC.Collect();
 
 
@@ -116,11 +148,19 @@ namespace DiskTester
             for (uint i = 0; i <= 1023; i++)
             {
                 speedWriteRunner(4096, 1, DestDisk, i.ToString());
-            }      
+            }
             sw.Stop();
             // 4096KB ÷ time = ?
             label8.Text = Convert.ToString((4096.0f / Convert.ToSingle(sw.ElapsedMilliseconds))) + "MB/s";
             System.GC.Collect();
+
+            sw.Reset();
+            sw.Start();
+            speedReadRunner(DestDisk);
+            sw.Stop();
+            label19.Text = Convert.ToString((4096.0f / Convert.ToSingle(sw.ElapsedMilliseconds))) + "MB/s";
+            System.GC.Collect();
+   
 
             /* 16KB */
             sw.Reset();
@@ -128,12 +168,20 @@ namespace DiskTester
             for (uint i = 0; i <= 1023; i++)
             {
                 speedWriteRunner(16384, 1, DestDisk, i.ToString());
-            } 
+            }
             sw.Stop();
             // 16MB ÷ time = ?
-            label10.Text = Convert.ToString((16384.0f  / Convert.ToSingle(sw.ElapsedMilliseconds))) + "MB/s";
+            label10.Text = Convert.ToString((16384.0f / Convert.ToSingle(sw.ElapsedMilliseconds))) + "MB/s";
             System.GC.Collect();
 
+
+            sw.Reset();
+            sw.Start();
+            speedReadRunner(DestDisk);
+            sw.Stop();
+            label18.Text = Convert.ToString((16384.0f / Convert.ToSingle(sw.ElapsedMilliseconds))) + "MB/s";
+            System.GC.Collect();
+ 
 
             /* 1MB */
             sw.Reset();
@@ -141,11 +189,19 @@ namespace DiskTester
             for (uint i = 0; i <= 1023; i++)
             {
                 speedWriteRunner(1048576, 1, DestDisk, i.ToString());
-            } 
+            }
             sw.Stop();
             // 1GB ÷ time = ?
             label12.Text = Convert.ToString((1048576.0f / Convert.ToSingle(sw.ElapsedMilliseconds))) + "MB/s";
             System.GC.Collect();
+
+            sw.Reset();
+            sw.Start();
+            speedReadRunner(DestDisk);
+            sw.Stop();
+            label17.Text = Convert.ToString((1048576.0f / Convert.ToSingle(sw.ElapsedMilliseconds))) + "MB/s";
+            System.GC.Collect();
+
 
             /* 32MB */
             sw.Reset();
@@ -153,7 +209,7 @@ namespace DiskTester
             for (uint i = 0; i < 32; i++)
             {
                 speedWriteRunner((1048576 * 32), 1, DestDisk, i.ToString());
-            } 
+            }
             sw.Stop();
             // 1GB ÷ time = ?
             label14.Text = Convert.ToString((1048576.0f / Convert.ToSingle(sw.ElapsedMilliseconds))) + "MB/s";
@@ -161,31 +217,67 @@ namespace DiskTester
 
             sw.Reset();
             sw.Start();
-            
+            speedReadRunner(DestDisk);
             sw.Stop();
-            label25.Text = Convert.ToString(sw.ElapsedMilliseconds) + "ms";
+            label16.Text = Convert.ToString((1048576.0f / Convert.ToSingle(sw.ElapsedMilliseconds))) + "MB/s";
+            System.GC.Collect();
+
+            fileList = Directory.GetFiles(DestDisk, "*.tmp");
+            
+            foreach (string f in fileList)
+            {
+                File.Delete(f);
+            }
+
         }
 
         public void speedWriteRunner(ulong blockSize, long blockCount, string TargetDisk, string FileName)
-        { 
-                using (FileStream stream = File.OpenWrite(TargetDisk + "HUDT" + FileName + ".tmp"))
+        {
+            using (FileStream stream = File.OpenWrite(TargetDisk + "HUDT" + FileName + ".tmp"))
+            {
+                byte[] data = new byte[blockSize];
+                Parallel.For(0, blockCount, k =>
                 {
-                    byte[] data = new byte[blockSize];
-                    
-                    Parallel.For(0, blockCount, k =>
-                            {
-                                stream.Write(data, 0, data.Length);
-                                
-                            }
-                    );
-                    stream.Flush(true);
-
-
-                    
+                    stream.Write(data, 0, data.Length);
                 }
+                );
+                stream.Flush(true);
+            }
+        }
 
-      }
-        
-     
-    }
+
+      /*  public void speedReadRunner(string TargetDisk)
+        {
+            MemoryStream inMemoryCopy = new MemoryStream();
+            string[] fileList = Directory.GetFiles(TargetDisk, "*.tmp");
+            int fileCount = fileList.Length;
+            Parallel.For(0, fileCount, k =>
+            {
+                   using (FileStream fs = File.OpenRead(fileList[k]))
+                   {
+                      fs.CopyTo(inMemoryCopy);
+                      fs.Flush();
+                      fs.Dispose();
+                   }
+                
+            });
+             
+        } */
+
+        public void speedReadRunner(string TargetDisk)
+        {
+            string[] fileList = Directory.GetFiles(TargetDisk, "*.tmp");
+            Parallel.For(0, fileList.Length, k =>
+            {
+                using (FileStream stream = File.OpenRead(fileList[k]))
+                {
+                    byte[] data = new byte[stream.Length];
+                    stream.Read(data,0,data.Length);
+                }
+            });
+        }
+   }
+
+
+
 }
