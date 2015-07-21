@@ -266,15 +266,22 @@ namespace DiskTester
 
         public void speedReadRunner(string TargetDisk)
         {
-            string[] fileList = Directory.GetFiles(TargetDisk, "*.tmp");
+            string[] fileList = Directory.GetFiles(TargetDisk, @"*.tmp");
             Parallel.For(0, fileList.Length, k =>
             {
-                using (FileStream stream = File.OpenRead(fileList[k]))
+                using (FileStream fs = File.Open(fileList[k], FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+                using (BufferedStream bs = new BufferedStream(fs))
+                using (StreamReader sr = new StreamReader(bs))
                 {
-                    byte[] data = new byte[stream.Length];
-                    stream.Read(data,0,data.Length);
+                    string line;
+                    while ((line = sr.ReadLine()) != null)
+                    {
+                    }
                 }
+
             });
+            
+            System.GC.Collect();
         }
    }
 
