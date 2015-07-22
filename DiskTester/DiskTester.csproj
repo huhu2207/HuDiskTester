@@ -124,6 +124,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="20150720074449571_easyicon_net_128.ico" />
+    <None Include="Resources\Write.png" />
+    <None Include="Resources\Read.png" />
+    <None Include="Resources\buttom2.png" />
+    <None Include="Resources\buttom1.png" />
+    <None Include="Resources\buttom.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
