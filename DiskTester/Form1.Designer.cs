@@ -130,9 +130,9 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button1.Location = new System.Drawing.Point(1202, 1279);
+            this.button1.Location = new System.Drawing.Point(1917, 855);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(327, 122);
+            this.button1.Size = new System.Drawing.Size(258, 192);
             this.button1.TabIndex = 0;
             this.button1.Text = "开始跑分";
             this.button1.UseVisualStyleBackColor = true;
@@ -142,9 +142,9 @@
             // 
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(132, 58);
+            this.comboBox1.Location = new System.Drawing.Point(136, 46);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(131, 36);
+            this.comboBox1.Size = new System.Drawing.Size(95, 36);
             this.comboBox1.TabIndex = 2;
             // 
             // groupBox1
@@ -152,18 +152,18 @@
             this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.comboBox1);
-            this.groupBox1.Location = new System.Drawing.Point(763, 1279);
+            this.groupBox1.Location = new System.Drawing.Point(1917, 678);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(433, 133);
+            this.groupBox1.Size = new System.Drawing.Size(258, 168);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "选择目标磁盘";
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(291, 48);
+            this.button3.Location = new System.Drawing.Point(26, 88);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(119, 54);
+            this.button3.Size = new System.Drawing.Size(205, 54);
             this.button3.TabIndex = 4;
             this.button3.Text = "刷新";
             this.button3.UseVisualStyleBackColor = true;
@@ -172,7 +172,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(29, 63);
+            this.label1.Location = new System.Drawing.Point(21, 49);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(96, 28);
             this.label1.TabIndex = 3;
@@ -185,19 +185,9 @@
             this.groupBox2.Controls.Add(this.pictureBox15);
             this.groupBox2.Controls.Add(this.pictureBox14);
             this.groupBox2.Controls.Add(this.groupBox11);
-            this.groupBox2.Controls.Add(this.groupBox1);
-            this.groupBox2.Controls.Add(this.groupBox10);
-            this.groupBox2.Controls.Add(this.button1);
-            this.groupBox2.Controls.Add(this.groupBox9);
-            this.groupBox2.Controls.Add(this.groupBox8);
-            this.groupBox2.Controls.Add(this.groupBox7);
-            this.groupBox2.Controls.Add(this.groupBox6);
-            this.groupBox2.Controls.Add(this.groupBox5);
-            this.groupBox2.Controls.Add(this.groupBox4);
-            this.groupBox2.Controls.Add(this.groupBox3);
             this.groupBox2.Location = new System.Drawing.Point(27, 27);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1571, 1435);
+            this.groupBox2.Size = new System.Drawing.Size(1506, 1005);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "跑分";
@@ -206,7 +196,7 @@
             // label41
             // 
             this.label41.AutoSize = true;
-            this.label41.Location = new System.Drawing.Point(141, 1356);
+            this.label41.Location = new System.Drawing.Point(1433, 926);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(54, 28);
             this.label41.TabIndex = 104;
@@ -215,7 +205,7 @@
             // label40
             // 
             this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(141, 1297);
+            this.label40.Location = new System.Drawing.Point(1432, 847);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(54, 28);
             this.label40.TabIndex = 103;
@@ -224,7 +214,7 @@
             // pictureBox15
             // 
             this.pictureBox15.Image = global::DiskTester.Properties.Resources.Read;
-            this.pictureBox15.Location = new System.Drawing.Point(71, 1295);
+            this.pictureBox15.Location = new System.Drawing.Point(1436, 814);
             this.pictureBox15.Name = "pictureBox15";
             this.pictureBox15.Size = new System.Drawing.Size(50, 30);
             this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -234,7 +224,7 @@
             // pictureBox14
             // 
             this.pictureBox14.Image = global::DiskTester.Properties.Resources.Write;
-            this.pictureBox14.Location = new System.Drawing.Point(71, 1354);
+            this.pictureBox14.Location = new System.Drawing.Point(1437, 893);
             this.pictureBox14.Name = "pictureBox14";
             this.pictureBox14.Size = new System.Drawing.Size(50, 30);
             this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -268,9 +258,9 @@
             this.groupBox11.Controls.Add(this.pictureBox3);
             this.groupBox11.Controls.Add(this.pictureBox2);
             this.groupBox11.Controls.Add(this.pictureBox1);
-            this.groupBox11.Location = new System.Drawing.Point(42, 331);
+            this.groupBox11.Location = new System.Drawing.Point(33, 40);
             this.groupBox11.Name = "groupBox11";
-            this.groupBox11.Size = new System.Drawing.Size(1496, 942);
+            this.groupBox11.Size = new System.Drawing.Size(1388, 926);
             this.groupBox11.TabIndex = 57;
             this.groupBox11.TabStop = false;
             this.groupBox11.Text = "图表";
@@ -508,9 +498,9 @@
             // 
             this.groupBox10.Controls.Add(this.label3);
             this.groupBox10.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.groupBox10.Location = new System.Drawing.Point(1188, 204);
+            this.groupBox10.Location = new System.Drawing.Point(1604, 928);
             this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Size = new System.Drawing.Size(350, 119);
+            this.groupBox10.Size = new System.Drawing.Size(298, 119);
             this.groupBox10.TabIndex = 56;
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "状态";
@@ -519,7 +509,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label3.Location = new System.Drawing.Point(56, 41);
+            this.label3.Location = new System.Drawing.Point(16, 47);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(154, 57);
             this.label3.TabIndex = 1;
@@ -531,9 +521,9 @@
             this.groupBox9.Controls.Add(this.label17);
             this.groupBox9.Controls.Add(this.label23);
             this.groupBox9.Controls.Add(this.label32);
-            this.groupBox9.Location = new System.Drawing.Point(43, 204);
+            this.groupBox9.Location = new System.Drawing.Point(1604, 553);
             this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(357, 119);
+            this.groupBox9.Size = new System.Drawing.Size(298, 119);
             this.groupBox9.TabIndex = 55;
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "1MB测试";
@@ -582,9 +572,9 @@
             // 
             this.groupBox8.Controls.Add(this.label26);
             this.groupBox8.Controls.Add(this.label25);
-            this.groupBox8.Location = new System.Drawing.Point(804, 204);
+            this.groupBox8.Location = new System.Drawing.Point(1603, 803);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(362, 119);
+            this.groupBox8.Size = new System.Drawing.Size(299, 119);
             this.groupBox8.TabIndex = 49;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "删除耗时";
@@ -615,9 +605,9 @@
             this.groupBox7.Controls.Add(this.label14);
             this.groupBox7.Controls.Add(this.label16);
             this.groupBox7.Controls.Add(this.label31);
-            this.groupBox7.Location = new System.Drawing.Point(426, 204);
+            this.groupBox7.Location = new System.Drawing.Point(1604, 678);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(362, 119);
+            this.groupBox7.Size = new System.Drawing.Size(298, 119);
             this.groupBox7.TabIndex = 48;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "32MB测试";
@@ -668,9 +658,9 @@
             this.groupBox6.Controls.Add(this.label10);
             this.groupBox6.Controls.Add(this.label18);
             this.groupBox6.Controls.Add(this.label24);
-            this.groupBox6.Location = new System.Drawing.Point(1176, 53);
+            this.groupBox6.Location = new System.Drawing.Point(1604, 415);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(362, 122);
+            this.groupBox6.Size = new System.Drawing.Size(298, 122);
             this.groupBox6.TabIndex = 47;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "16KB测试";
@@ -721,9 +711,9 @@
             this.groupBox5.Controls.Add(this.label34);
             this.groupBox5.Controls.Add(this.label19);
             this.groupBox5.Controls.Add(this.label8);
-            this.groupBox5.Location = new System.Drawing.Point(804, 53);
+            this.groupBox5.Location = new System.Drawing.Point(1604, 287);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(362, 122);
+            this.groupBox5.Size = new System.Drawing.Size(298, 122);
             this.groupBox5.TabIndex = 46;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "4KB测试";
@@ -774,9 +764,9 @@
             this.groupBox4.Controls.Add(this.label6);
             this.groupBox4.Controls.Add(this.label20);
             this.groupBox4.Controls.Add(this.label35);
-            this.groupBox4.Location = new System.Drawing.Point(426, 53);
+            this.groupBox4.Location = new System.Drawing.Point(1604, 159);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(362, 122);
+            this.groupBox4.Size = new System.Drawing.Size(298, 122);
             this.groupBox4.TabIndex = 45;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "2KB测试";
@@ -827,9 +817,9 @@
             this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Controls.Add(this.label21);
             this.groupBox3.Controls.Add(this.label36);
-            this.groupBox3.Location = new System.Drawing.Point(43, 53);
+            this.groupBox3.Location = new System.Drawing.Point(1604, 27);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(362, 122);
+            this.groupBox3.Size = new System.Drawing.Size(298, 122);
             this.groupBox3.TabIndex = 44;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "1KB测试";
@@ -879,8 +869,18 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1632, 1474);
+            this.ClientSize = new System.Drawing.Size(2187, 1071);
             this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox5);
+            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.groupBox4);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.groupBox6);
+            this.Controls.Add(this.groupBox9);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.groupBox10);
+            this.Controls.Add(this.groupBox7);
+            this.Controls.Add(this.groupBox8);
             this.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
