@@ -18,6 +18,12 @@ namespace DiskTester
     public partial class Form1 : Form
     {
         public float gkb1r, gkb1w, gkb2r, gkb2w, gkb4r, gkb4w, gkb16r, gkb16w, gmb1r, gmb1w, gmb16r, gmb16w;
+
+        private void groupBox3_Enter(object sender, EventArgs e)
+        {
+
+        }
+
         public Form1()
         {
             InitializeComponent();
