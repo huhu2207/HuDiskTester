@@ -95,7 +95,7 @@ namespace DiskTester
             {
                 Directory.CreateDirectory(DestDisk);
             }
-            label3.Text = @"正在跑分……";
+            label3.Text = @"正在跑分!";
             Stopwatch sw = new Stopwatch();
 
             /* 1KB */
@@ -263,7 +263,7 @@ namespace DiskTester
 
             groupBox1.Enabled = true;
             button1.Enabled = true;
-            label3.Text = @"跑分完成！";
+            label3.Text = @"跑分完成!";
         }
 
         public void speedWriteRunner(ulong blockSize, long blockCount, string TargetDisk, string FileName)
