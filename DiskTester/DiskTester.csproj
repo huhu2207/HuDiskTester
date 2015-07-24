@@ -95,7 +95,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="app.manifest" />
+    <None Include="app.manifest">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -128,6 +130,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="20150720074449571_easyicon_net_128.ico" />
+    <None Include="Resources\buttom4.png" />
+    <None Include="Resources\buttom3.png" />
     <None Include="Resources\Write.png" />
     <None Include="Resources\Read.png" />
     <None Include="Resources\buttom2.png" />
