@@ -65,10 +65,10 @@
             this.label20 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label29 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -494,6 +494,16 @@
             this.groupBox3.Text = "1KB测试";
             this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
             // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("SimSun", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label29.Location = new System.Drawing.Point(12, 80);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(73, 21);
+            this.label29.TabIndex = 38;
+            this.label29.Text = "读取：";
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -524,16 +534,6 @@
             this.label36.TabIndex = 31;
             this.label36.Text = "写入：";
             // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("SimSun", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label29.Location = new System.Drawing.Point(12, 80);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(73, 21);
-            this.label29.TabIndex = 38;
-            this.label29.Text = "读取：";
-            // 
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(966, 98);
@@ -542,6 +542,7 @@
             this.button2.TabIndex = 57;
             this.button2.Text = "扩容测试";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button4
             // 
@@ -551,6 +552,7 @@
             this.button4.TabIndex = 58;
             this.button4.Text = "老化测试";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 

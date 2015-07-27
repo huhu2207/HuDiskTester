@@ -19,6 +19,18 @@ namespace DiskTester
     {
         public float gkb1r, gkb1w, gkb2r, gkb2w, gkb4r, gkb4w, gkb16r, gkb16w, gmb1r, gmb1w, gmb16r, gmb16w;
 
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Form3 frm3 = new Form3();
+            frm3.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form2 frm2 = new Form2();
+            frm2.ShowDialog();
+        }
+
         private void groupBox3_Enter(object sender, EventArgs e)
         {
 
